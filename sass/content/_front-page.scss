@@ -1,0 +1,57 @@
+.section__top__image{
+  h1{
+font-size: 116px;
+color: #FFFFFF;
+letter-spacing: 0.82px;
+line-height: 144px;
+margin: auto;
+
+em{
+  font-style: oblique;
+}
+}
+}
+
+
+
+.section__recipeshow{
+  position: relative;
+  width: 100%;
+  margin-top: 160px;
+
+  h2{
+    font-weight: 700;
+    width: 416px;
+    font-size: 54px;
+    color: #000000;
+    line-height: 67px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  img{
+    width: calc(100% - 208px);
+  }
+
+}
+.section__recipeshow:nth-child(odd){
+
+  h2{
+    right: 0;
+  }
+  img{
+  }
+
+}
+.section__recipeshow:nth-child(even){
+  overflow: hidden;
+  h2{
+    right: auto;
+    text-align: right;
+
+  }
+  img{
+    float: right;
+  }
+
+}

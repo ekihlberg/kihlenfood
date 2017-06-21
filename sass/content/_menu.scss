@@ -1,0 +1,27 @@
+.main-menu{
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 40;
+  top: 0;
+  ul{
+    display:flex;
+    align-items: center;
+    min-height: 90px;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin: 0 auto;
+    li{
+      a{
+        /* Kategorier: */
+        font-family:  $font_title;
+        font-weight: 600;
+        font-size: 12px;
+        color: #000000;
+        letter-spacing: 0.9px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

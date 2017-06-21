@@ -1,0 +1,47 @@
+/* Options */
+$max-width: 1440px;
+$gutter: 24px;
+
+/* Colors */
+$theme: #020A69;
+
+
+$text_color: #000;
+$link_color: $theme;
+$border_color: #fff;
+$input_border_color: $link_color;
+$bg_body: #fff;
+  $bg-grey: #eee;
+
+/* Text styles */
+$font-size: 16px;
+$line-height: 25px;
+
+$book: 300;
+$heavy: 800;
+$medium: 500;
+
+
+$weight_bold: $heavy;
+$weight_semi: $medium;
+$weight_light: $book;
+
+
+
+/* Fonts */
+$font_normal:'Libre Baskerville', serif;
+$font_title: 'Muli', sans-serif;
+
+/* Easings */
+$easing_google: cubic-bezier(0.77,0,0.175,1);
+
+/* Responsive break points */
+$portait: "screen and (min-width: 768px)";
+$landscape: "screen and (min-width: 1024px)";
+$desktop: "screen and (min-width: 1280px)";
+$xl: "screen and (min-width: 1440px)";
+
+
+.bg--grey{
+  background-color: $bg-grey;
+}

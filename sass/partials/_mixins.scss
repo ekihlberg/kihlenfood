@@ -1,0 +1,58 @@
+/* Clearfix */
+@mixin cf() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* Center content to max-width set in variables.scss */
+@mixin contain($width: $maw, $padding: $g) {
+  max-width: $width + ($padding * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+/* Simple button mixin to get going */
+@mixin btn($height: 56px, $borderRadius: 2px, $bgTop: $gray_darker, $bgBottom: $gray_darkest, $color: #fff, $fontSize: 16px, $display: inline-block) {
+  display: $display;
+  height: $height;
+  color: $color;
+  font-size: $fontSize;
+  line-height: $height;
+  font-weight: $semi;
+  border-radius: $borderRadius;
+  background: linear-gradient(to bottom, $bgTop, $bgBottom);
+  padding: 0 $g * 0.75;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #333;
+  }
+}
+
+/* Default mixin to animate objects when scrolled to, code in js/script.js */
+@mixin showOnScroll($time: 0.6s, $delay: 0s) {
+  .cssanimations & {
+    opacity: 0;
+    transform: translateY(64px);
+    transition: all $time $delay ease-in-out, text-shadow 0s ($time + $delay) linear;
+    text-shadow: 0px 0px transparent;//Hack to force the text to render when done
+
+    &.js-show--shown {
+      opacity: 1;
+      transform: translateY(0px);
+      text-shadow: 0px 1px transparent;
+    }
+
+  }
+}
+
+
+@mixin linkTransition {
+  transition: all 0.3 ease-in-out;
+}

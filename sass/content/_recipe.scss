@@ -1,0 +1,128 @@
+.section__recipe__ingridi{
+   column-count: 2;
+  max-width: 530px;
+  font-family: $font_title;
+}
+.section__recipe_top{
+  margin: 160px 0 80px ;
+  display: flex;
+
+  h2{
+  margin-right: 50px;
+  width: 270px;
+  }
+}
+.section__recipe__content{
+  padding-top: 80px;
+    display: flex;
+
+
+}
+.section__recipe__content__ingress{
+    width: 270px;
+    font-style: oblique;
+    font-size: 22px;
+    color: #000000;
+    line-height: 35px;
+    margin-right: 50px;
+}
+.section__recipe__content__text{
+    max-width: 530px;
+
+}
+.title{
+      position: relative;
+      width: 100%;
+      &:before{
+        content: '';
+        transform: translateY(-50%);
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        left: 0px;
+        right: 0px;
+        top: 50%;
+        height: 1px;
+        background-color: #999;
+
+      }
+}
+
+.ruler{
+  display: inline-block;
+  font-family: $font_title ;
+  font-size: 16px;
+  color: #000000;
+  line-height: 23px;
+  z-index: 7;
+  background-color: $bg-grey;
+  position: relative;
+z-index: 100;
+padding-right: 16px;
+
+}
+.recipe__image{
+  margin-top: 80px;
+}
+.single-recept{
+  .section__top__image{
+
+    .overlay{
+      opacity: 0;
+      transition: opacity .4s ease-out;
+    }
+    h1{
+      font-size: 6vw;
+      line-height: 11vw;
+      text-align: center;
+    }
+  }
+  .section__top__image:hover{
+
+    .overlay{
+      opacity: 1;
+    }
+  }
+}
+.section__grid{
+padding-bottom: 60px;
+}
+.section__grid__content{
+  position: relative;
+  img{
+    width: 100%;
+  }
+}
+.section__grid__content_title{
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  max-width: calc(100% - 40px);
+  font-size: 1.5vw;
+  transform: translateY(50%);
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+}
+.color{
+  background-color: $theme;
+  padding: 20px 0;
+  h2{
+    margin: 0px auto;
+    position: static;
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+}
+#grid{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.column { float: left; }
+.size-1of3 { width: 33.333%; padding: 20px;}

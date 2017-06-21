@@ -1,0 +1,26 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+background-color: $bg-grey;
+border: solid 2px #fff;
+font-family: $font_normal;
+
+
+  &:focus,
+  &:active {
+  }
+}
+input[type="submit"]{
+  line-height: normal;
+}
+select {
+
+}
+
+
+textarea {
+
+}

@@ -1,0 +1,402 @@
+@charset "UTF-8";
+/*
+Theme Name: Cellwood Group
+Author: NY Collective
+Author URI: http://ny.se/
+License: NY Collective
+*/
+/* Options */
+/* Colors */
+/* Text styles */
+/* Fonts */
+/* Easings */
+/* Responsive break points */
+/* Clearfix */
+/* Center content to max-width set in variables.scss */
+/* Simple button mixin to get going */
+/* Default mixin to animate objects when scrolled to, code in js/script.js */
+.js-show {
+  transform: translateY(64px);
+  opacity: 0;
+  text-shadow: 0px 0px transparent;
+  transition: all 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1), text-shadow 0s 1.2s linear; }
+  .js-show.delay-content *:not(.do-not-delay) {
+    transform: translateY(40px) scale(1);
+    opacity: 0;
+    transition: all 0.2s 0.2s ease-in-out, text-shadow 0s 0.4s linear; }
+  .js-show.delay-content.js-show--shown *:not(.do-not-delay) {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    transition: all 0.6s 0.6s ease-in-out, text-shadow 0s 1.2s linear; }
+    .js-show.delay-content.js-show--shown *:not(.do-not-delay):nth-child(2) {
+      transition: all 0.6s 0.8s ease-in-out, text-shadow 0s 1.4s linear; }
+    .js-show.delay-content.js-show--shown *:not(.do-not-delay):nth-child(3) {
+      transition: all 0.6s 1s ease-in-out, text-shadow 0s 1.6s linear; }
+    .js-show.delay-content.js-show--shown *:not(.do-not-delay):nth-child(4) {
+      transition: all 0.6s 1.2s ease-in-out, text-shadow 0s 1.8s linear; }
+
+.js-show-delay {
+  transform: translateY(40px) scale(1);
+  opacity: 0;
+  transition: all 0.6s 0.2s ease-in-out, text-shadow 0s 0.8s linear; }
+  .js-show--shown .js-show-delay {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    transition: all 0.6s 0.7s ease-in-out, text-shadow 0s 1.3s linear; }
+
+.js-show--shown {
+  opacity: 1;
+  transform: translateY(0px);
+  text-shadow: 0px 1px transparent; }
+  .js-show--shown:nth-child(0) {
+    transition: all 0.6s 0.2s ease-in-out, text-shadow 0s 0.8s linear; }
+  .js-show--shown:nth-child(1) {
+    transition: all 0.6s 0.3s ease-in-out, text-shadow 0s 0.9s linear; }
+  .js-show--shown:nth-child(2) {
+    transition: all 0.6s 0.4s ease-in-out, text-shadow 0s 1s linear; }
+  .js-show--shown:nth-child(3) {
+    transition: all 0.6s 0.5s ease-in-out, text-shadow 0s 1.1s linear; }
+  .js-show--shown:nth-child(4) {
+    transition: all 0.6s 0.6s ease-in-out, text-shadow 0s 1.2s linear; }
+  .js-show--shown:nth-child(5) {
+    transition: all 0.6s 0.7s ease-in-out, text-shadow 0s 1.3s linear; }
+  .js-show--shown:nth-child(6) {
+    transition: all 0.6s 0.8s ease-in-out, text-shadow 0s 1.4s linear; }
+  .js-show--shown:nth-child(7) {
+    transition: all 0.6s 0.9s ease-in-out, text-shadow 0s 1.5s linear; }
+  .js-show--shown:nth-child(8) {
+    transition: all 0.6s 1s ease-in-out, text-shadow 0s 1.6s linear; }
+  .js-show--shown:nth-child(9) {
+    transition: all 0.6s 1.1s ease-in-out, text-shadow 0s 1.7s linear; }
+  .js-show--shown:nth-child(10) {
+    transition: all 0.6s 1.2s ease-in-out, text-shadow 0s 1.8s linear; }
+  .js-show--shown:nth-child(11) {
+    transition: all 0.6s 1.3s ease-in-out, text-shadow 0s 1.9s linear; }
+  .js-show--shown:nth-child(12) {
+    transition: all 0.6s 1.4s ease-in-out, text-shadow 0s 2s linear; }
+  .js-show--shown:nth-child(13) {
+    transition: all 0.6s 1.5s ease-in-out, text-shadow 0s 2.1s linear; }
+  .js-show--shown:nth-child(14) {
+    transition: all 0.6s 1.6s ease-in-out, text-shadow 0s 2.2s linear; }
+
+/* ----------------
+  Import other basic stuff
+---------------- */
+/**
+* 1. Change the default font family in all browsers (opinionated).
+* 2. Correct the line height in all browsers.
+* 3. Prevent adjustments of font size after orientation changes in
+*    IE on Windows Phone and in iOS.
+*/
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+  display: block; }
+
+figure {
+  margin: 0; }
+
+/*
+* 1. Remove the gray background on active links in IE 10.
+* 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+*/
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+* Remove the outline on focused links when they are also active or hovered
+* in all browsers (opinionated).
+*/
+a:active,
+a:hover {
+  outline-width: 0; }
+
+img {
+  border-style: none; }
+
+/**
+* Hide the overflow in IE.
+*/
+svg:not(:root) {
+  overflow: hidden; }
+
+/**
+* Remove the inner border and padding in Firefox.
+*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+* Restore the focus styles unset by the previous rule.
+*/
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+* Remove the default vertical scrollbar in IE.
+*/
+textarea {
+  overflow: auto; }
+
+/**
+* 1. Add the correct box sizing in IE 10-.
+* 2. Remove the padding in IE 10-.
+*/
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+* 1. Correct the odd appearance in Chrome and Safari.
+* 2. Correct the outline style in Safari.
+*/
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+* Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+*/
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+* 1. Correct the inability to style clickable types in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+[hidden] {
+  display: none; }
+
+/*///////////////////////////////////////////////////////////////////////////////
+///// Custom styles /////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*/
+/* Basic GUI */
+html, body {
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+input[type="text"], input[type="email"], input[type="submit"], input[type="number"], input[type="password"], textarea {
+  padding: 12px 12px;
+  line-height: 1;
+  border: 1px solid; }
+
+textarea {
+  line-height: 1.4;
+  resize: none; }
+
+input[type="checkbox"], input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  position: relative;
+  width: 18px;
+  background: #fff;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px; }
+  input[type="checkbox"]:before, input[type="radio"]:before {
+    content: "";
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    outline: none; }
+  input[type="checkbox"]:checked:before, input[type="radio"]:checked:before {
+    content: "\f00c";
+    background-color: #fff;
+    color: #006A45;
+    background-size: 100%; }
+
+.btn {
+  cursor: pointer; }
+
+/* -----
+  Basics
+----- */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  background-color: #fff; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  color: #006A45; }
+
+/* Input fixes */
+input[type=“text”], input[type=“email”], input[type=“submit”], input[type=“number”], input[type=“tel”], input[type=“password”], textarea {
+  padding: 12px 12px;
+  line-height: 1;
+  border: 2px solid #ddd;
+  border: 2px solid rgba(0, 106, 69, 0);
+  border-radius: 0;
+  font-size: .9rem;
+  transition: all 0.3 ease-in-out;
+  background: #006A45;
+  color: #fff; }
+  input[type=“text”]::placeholder, input[type=“email”]::placeholder, input[type=“submit”]::placeholder, input[type=“number”]::placeholder, input[type=“tel”]::placeholder, input[type=“password”]::placeholder, textarea::placeholder {
+    color: #ddd; }
+  input[type=“text”]:focus, input[type=“text”]:active, input[type=“email”]:focus, input[type=“email”]:active, input[type=“submit”]:focus, input[type=“submit”]:active, input[type=“number”]:focus, input[type=“number”]:active, input[type=“tel”]:focus, input[type=“tel”]:active, input[type=“password”]:focus, input[type=“password”]:active, textarea:focus, textarea:active {
+    outline: #006A45;
+    border: 2px solid #006a45; }
+
+/*select {
+  font-size: .9rem;
+  line-height: 1;
+}*/
+.select-wrapper {
+  position: relative;
+  padding: 12px 0;
+  padding: 0; }
+  .select-wrapper select {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .select-wrapper:before {
+    content: attr(data-selected);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 12px 12px;
+    border: 2px solid rgba(0, 106, 69, 0);
+    transition: all 0.3 ease-in-out;
+    border-radius: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .9rem;
+    color: #ddd;
+    height: 100%; }
+    .contact-form .select-wrapper:before {
+      background: #006A45;
+      color: #fff; }
+  .select-wrapper:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: “\f0d7”;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    color: #ddd;
+    width: 50px;
+    font-size: 2.5rem; }
+    .contact-form .select-wrapper:after {
+      background: rgba(255, 255, 255, 0.1);
+      color: #006A45; }
+  .select-wrapper:hover:before {
+    border: 2px solid #006a45; }
+
+/* ----------------
+  Fonts / Helpers
+---------------- */
+.fa, input[type="checkbox"]:checked:before, input[type="radio"]:checked:before, .select-wrapper:after, .icon {
+  font: normal normal normal 14px/1 "FontAwesome";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* ----------------
+  General
+---------------- */
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: 800; }
+
+/* ----------------
+  Headers
+---------------- */
+h1, h2, h3, h4 {
+  font-family: serif;
+  line-height: 1.2; }
+
+/* ----------------
+  Content
+---------------- */
+/* ----------------
+  Header
+---------------- */
+/* ---- Header ---- */
+/* Logo (img as default) */
+/* ----------------
+  Content styles
+---------------- */
+/* ----------------
+  Footer
+---------------- */
